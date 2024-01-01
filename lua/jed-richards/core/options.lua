@@ -39,8 +39,9 @@ vim.opt.splitright = true    -- force all vertical splits to go to the right of 
 vim.opt.showtabline = 2      -- always show tabs
 
 -- Mouse and Clipboard
--- allows neovim access to system clipboard through WSL
 vim.cmd [[ set clipboard+=unnamedplus ]]
+
+-- allows neovim access to system clipboard through WSL
 --vim.cmd [[
 --    set clipboard+=unnamedplus
 --    let g:clipboard = {
@@ -65,7 +66,6 @@ vim.opt.fileencoding = "utf-8"                  -- the encoding written to a fil
 vim.opt.termguicolors = true                    -- set term gui colors (most terminals support this)
 vim.opt.timeoutlen = 1000                       -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.updatetime = 300                        -- faster completion (4000ms default)
---vim.opt.guifont = "monospace:h17"             -- the font used in graphical neovim applications
 
 -- Makes command search look better
 --vim.opt.pumblend = 17  -- transparent
