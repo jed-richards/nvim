@@ -42,3 +42,7 @@ Other:
     - mini.statusline
 - nvim-treesitter/nvim-treesitter --> syntax highlights/better text objects
 - folke/which-key.nvim
+
+### Requirements
+- xclip - for system clipboard
+- ripgrep - for telescope
