@@ -46,3 +46,4 @@ Other:
 ### Requirements
 - xclip - for system clipboard
 - ripgrep - for telescope
+- [node](https://github.com/nodesource/distributions?tab=readme-ov-file#installation-instructions)
