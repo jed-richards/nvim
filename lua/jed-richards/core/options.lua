@@ -60,7 +60,7 @@ vim.cmd([[ set clipboard+=unnamedplus ]])
 --vim.opt.mouse = "a"          -- allow the mouse to be used in neovim
 
 -- Random
-vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
+--vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
 
@@ -73,3 +73,8 @@ vim.opt.updatetime = 250
 --  and `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+-- Obsidian.nvim
+vim.opt.conceallevel = 2
+
+vim.g.have_nerd_font = true
