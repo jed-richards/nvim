@@ -14,6 +14,13 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
+-- Splits resizing (from Teej)
+-- <M-,> is Alt+,
+-- map("n", "<M-,>", "<C-w>5<")
+-- map("n", "<M-.>", "<C-w>5>")
+-- map("n", "<M-t>", "<C-w>+")
+-- map("n", "<M-s>", "<C-w>-")
+
 -- Text manipulation
 map("v", ">", ">gv") -- indents
 map("v", "<", "<gv") -- indents
@@ -30,6 +37,9 @@ map("n", "N", "Nzzzv")
 
 -- Clear highlight
 map("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- Tmux Sessionizer
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
