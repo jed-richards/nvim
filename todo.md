@@ -1,4 +1,5 @@
 # TODO:
+
 - [ ] Look at dap (debugger)
 - [ ] [trouble.nvim](https://github.com/folke/trouble.nvim)
 - [ ] [fugitive](https://github.com/tpope/vim-fugitive) or [lazygit](https://github.com/kdheepak/lazygit.nvim)
@@ -8,5 +9,6 @@
 - [ ] Update README.md with links to plugins
 
 ## Learn
+
 - quickfix list
 - plenary
