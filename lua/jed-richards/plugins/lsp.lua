@@ -38,12 +38,16 @@ return {
 			require("mason-lspconfig").setup()
 			require("jed-richards.lsp").config()
 
-			-- use mason's automatic server startup functionality
+			-- use mason's automatic server startup functionality for mason installed
+			-- language servers
 			require("mason-lspconfig").setup_handlers({
 				function(server_name)
 					require("jed-richards.lsp").setup(server_name)
 				end,
 			})
+
+			-- setup rust-analyzer separately since it was not installed via mason
+			require("jed-richards.lsp").setup("rust_analyzer")
 		end,
 	},
 
