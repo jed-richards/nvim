@@ -7,18 +7,18 @@ return {
 			checkOnSave = {
 				command = "clippy",
 			},
-			-- inlayHints = {
-			-- 	typeHints = {
-			-- 		enable = true,
-			-- 	},
-			-- 	chainingHints = {
-			-- 		enable = true,
-			-- 	},
-			-- 	lifetimeElisionHints = {
-			-- 		enable = true,
-			-- 		useParameterNames = true,
-			-- 	},
-			-- },
+			inlayHints = {
+				typeHints = {
+					enable = true,
+				},
+				chainingHints = {
+					enable = true,
+				},
+				lifetimeElisionHints = {
+					enable = true,
+					useParameterNames = true,
+				},
+			},
 		},
 	},
 }
