@@ -30,4 +30,7 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = { signs = false },
 	},
+
+	-- JSON Schemas
+	"b0o/schemastore.nvim",
 }

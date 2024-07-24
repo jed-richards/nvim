@@ -136,7 +136,7 @@ return {
 					python = {
 						analysis = {
 							-- Ignore all files for analysis to exclusively use Ruff for linting
-							--ignore = { "*" },
+							-- ignore = { "*" },
 						},
 					},
 				},
@@ -155,9 +155,16 @@ return {
 						checkOnSave = {
 							command = "clippy",
 						},
+						inlayHints = {
+							lifetimeElisionHints = {
+								enable = true,
+								useParameterNames = true,
+							},
+						},
 					},
 				},
 			},
+			--
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
 			-- Some languages (like typescript) have entire language plugins that can be useful:
@@ -193,6 +200,30 @@ return {
 						},
 						-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
 						-- diagnostics = { disable = { 'missing-fields' } },
+					},
+				},
+			},
+
+			jsonls = {
+				settings = {
+					json = {
+						schemas = require("schemastore").json.schemas(),
+						validate = { enable = true },
+					},
+				},
+			},
+
+			yamlls = {
+				settings = {
+					yaml = {
+						schemaStore = {
+							-- You must disable built-in schemaStore support if you want to use
+							-- this plugin and its advanced options like `ignore`.
+							enable = false,
+							-- Avoid TypeError: Cannot read properties of undefined (reading 'length')
+							url = "",
+						},
+						schemas = require("schemastore").yaml.schemas(),
 					},
 				},
 			},
