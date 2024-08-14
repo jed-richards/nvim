@@ -15,9 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 
 --require("lazy").setup(plugins, opts)
 require("lazy").setup({
-    spec = {
-	    { import = "jed-richards.plugins" },
-    },
+	spec = {
+		{ import = "jed-richards.plugins" },
+	},
 
 	change_detection = {
 		notify = false,

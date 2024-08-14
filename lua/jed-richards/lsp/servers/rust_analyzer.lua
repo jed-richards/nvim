@@ -19,6 +19,9 @@ return {
 					useParameterNames = true,
 				},
 			},
+			cargo = {
+				features = "all",
+			},
 		},
 	},
 }
