@@ -48,6 +48,9 @@ return {
 
 			-- setup rust-analyzer separately since it was not installed via mason
 			require("jed-richards.lsp").setup("rust_analyzer")
+
+			-- setup sourcekit separately since it was not installed via mason
+			require("jed-richards.lsp").setup("sourcekit")
 		end,
 	},
 
