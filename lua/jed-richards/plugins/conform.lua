@@ -32,6 +32,8 @@ return {
 			jsonc = { "prettier" },
 			markdown = { "prettier" },
 			typescript = { "prettier" },
+
+			swift = { "swift_format" }, -- /usr/bin/swift-format
 		},
 	},
 }
