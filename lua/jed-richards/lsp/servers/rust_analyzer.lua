@@ -30,9 +30,9 @@ return {
 					useParameterNames = true,
 				},
 			},
-			cargo = {
-				features = "all",
-			},
+			-- cargo = {
+			-- 	features = "all",
+			-- },
 			-- cachePriming = {
 			-- 	enable = false,
 			-- },
