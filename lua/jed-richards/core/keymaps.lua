@@ -16,10 +16,10 @@ map("n", "<C-l>", "<C-w>l")
 
 -- Splits resizing (from Teej)
 -- <M-,> is Alt+,
--- map("n", "<M-,>", "<C-w>5<")
--- map("n", "<M-.>", "<C-w>5>")
--- map("n", "<M-t>", "<C-w>+")
--- map("n", "<M-s>", "<C-w>-")
+map("n", "<M-,>", "<C-w>5<")
+map("n", "<M-.>", "<C-w>5>")
+map("n", "<M-t>", "<C-w>+")
+map("n", "<M-s>", "<C-w>-")
 
 -- Text manipulation
 map("v", ">", ">gv") -- indents
