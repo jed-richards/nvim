@@ -15,13 +15,21 @@ return {
 			lua = { "stylua" },
 
 			-- Conform can also run multiple formatters sequentially
-			python = function(bufnr)
-				if require("conform").get_formatter_info("ruff_format", bufnr).available then
-					return { "ruff_format" }
-				else
-					return { "isort", "black" }
-				end
-			end,
+			-- python = function(bufnr)
+			-- 	if require("conform").get_formatter_info("ruff_format", bufnr).available then
+			-- 		return { "ruff_format" }
+			-- 	else
+			-- 		return { "isort", "black" }
+			-- 	end
+			-- end,
+			python = {
+				-- To fix auto-fixable lint errors.
+				-- "ruff_fix",
+				-- To run the Ruff formatter.
+				"ruff_format",
+				-- To organize the imports.
+				"ruff_organize_imports",
+			},
 			--
 
 			yaml = { "prettier" },
