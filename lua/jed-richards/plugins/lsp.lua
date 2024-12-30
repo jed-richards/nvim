@@ -57,7 +57,13 @@ return {
 	-- Pretty UI for useful status updates for LSP
 	{
 		"j-hui/fidget.nvim",
-		opts = {},
+		opts = {
+			notification = {
+				window = {
+					winblend = 0,
+				},
+			},
+		},
 	},
 
 	{
