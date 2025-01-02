@@ -62,7 +62,7 @@ vim.cmd([[ set clipboard+=unnamedplus ]])
 -- Random
 --vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
-vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
+vim.o.termguicolors = true -- set term gui colors (most terminals support this)
 
 -- Decrease update time
 vim.opt.timeoutlen = 300
