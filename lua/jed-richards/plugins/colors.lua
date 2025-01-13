@@ -13,14 +13,14 @@ return {
 		priority = 1000, -- load before all other startup plugins
 
 		config = function()
-			-- require("rose-pine").setup({
-			-- 	disable_background = true,
-			-- 	disable_italics = true,
-			-- })
+			require("rose-pine").setup({
+				disable_background = true,
+				disable_italics = true,
+			})
 			--
-			-- vim.cmd.colorscheme("rose-pine")
-			-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-			-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+			vim.cmd.colorscheme("rose-pine")
+			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 		end,
 	},
 
@@ -40,7 +40,9 @@ return {
 				no_italic = true,
 			})
 
-			vim.cmd.colorscheme("catppuccin")
+			-- vim.cmd.colorscheme("catppuccin")
+			-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+			-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 		end,
 	},
 
