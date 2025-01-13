@@ -12,7 +12,7 @@ return {
 	-- 		server = "rust-analyzer",
 	-- 	},
 	-- },
-	cmd = { "ra-multiplex" },
+	-- cmd = { "ra-multiplex" },
 	settings = {
 		["rust-analyzer"] = {
 			checkOnSave = {
