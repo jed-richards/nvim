@@ -28,7 +28,7 @@ return {
 	opts = {
 		workspaces = {
 			{
-				name = "personal",
+				name = "test",
 				path = "~/vault/My-Second-Brain",
 			},
 			{
@@ -39,10 +39,10 @@ return {
 				name = "work",
 				path = "~/vault/work",
 			},
-			-- {
-			--   name = "work",
-			--   path = "~/vaults/work",
-			-- },
+			{
+				name = "personal",
+				path = "~/vault/personal",
+			},
 		},
 
 		-- see below for full list of options 👇
