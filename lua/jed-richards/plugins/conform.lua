@@ -42,6 +42,8 @@ return {
 			typescript = { "prettier" },
 
 			swift = { "swift_format" }, -- /usr/bin/swift-format
+
+			nix = { "alejandra" },
 		},
 	},
 }
