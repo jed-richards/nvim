@@ -16,6 +16,9 @@ return {
 
 		lint.linters_by_ft = {
 			swift = { "swiftlint" },
+			markdown = { "vale" },
+			-- markdown = { "cspell" },
+
 			-- python = { "ruff" },
 		}
 
