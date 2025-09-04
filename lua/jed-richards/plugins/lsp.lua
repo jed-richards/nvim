@@ -1,25 +1,7 @@
 return {
-	-- native LSP
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("jed-richards.lsp").config()
-		end,
-	},
-
-	-- LSP settings manager; must be setup **before** any language servers are
-	-- configured
-	{
-		"folke/neoconf.nvim",
-		config = true,
-		priority = 100,
-	},
-
-	-- language server installer; must be setup before null-ls to ensure
-	-- mason-managed tools are available in the path
+	-- Language server installer (still useful for managing servers)
 	{
 		"williamboman/mason.nvim",
-		priority = 100,
 		build = ":MasonUpdate",
 		opts = {
 			ui = {
@@ -29,29 +11,6 @@ return {
 		dependencies = {
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 		},
-	},
-
-	-- language server manager
-	{
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup()
-			require("jed-richards.lsp").config()
-
-			-- use mason's automatic server startup functionality for mason installed
-			-- language servers
-			require("mason-lspconfig").setup_handlers({
-				function(server_name)
-					require("jed-richards.lsp").setup(server_name)
-				end,
-			})
-
-			-- setup rust-analyzer separately since it was not installed via mason
-			require("jed-richards.lsp").setup("rust_analyzer")
-
-			-- setup sourcekit separately since it was not installed via mason
-			require("jed-richards.lsp").setup("sourcekit")
-		end,
 	},
 
 	-- Pretty UI for useful status updates for LSP

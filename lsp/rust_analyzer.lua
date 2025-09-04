@@ -1,18 +1,24 @@
+-- Rust language server configuration
 -- For more settings see:
 -- https://github.com/rust-lang/rust-analyzer/blob/master/docs/book/src/configuration_generated.md
 
 return {
+	cmd = { "rust-analyzer" },
+	filetypes = { "rust" },
+	root_markers = { "Cargo.toml", "rust-project.json", ".git" },
+
 	-- https://github.com/pr2502/ra-multiplex/blob/main/README.md
 	--
 	-- cmd = vim.lsp.rpc.connect("127.0.0.1", 27631),
 	-- init_options = {
-	-- 	lspMux = {
-	-- 		version = "1",
-	-- 		method = "connect",
-	-- 		server = "rust-analyzer",
-	-- 	},
+	--   lspMux = {
+	--     version = "1",
+	--     method = "connect",
+	--     server = "rust-analyzer",
+	--   },
 	-- },
 	-- cmd = { "ra-multiplex" },
+
 	settings = {
 		["rust-analyzer"] = {
 			checkOnSave = true,
@@ -33,24 +39,25 @@ return {
 				},
 			},
 			-- lens = {
-			-- 	enable = false,
+			--   enable = false,
 			-- },
 			-- procMacro = {
-			-- 	ignored = {
-			-- 		mockall_derive = {
-			-- 			"automock",
-			-- 		},
-			-- 		mockall_double = {
-			-- 			"double",
-			-- 		},
-			-- 	},
+			--   ignored = {
+			--     mockall_derive = {
+			--       "automock",
+			--     },
+			--     mockall_double = {
+			--       "double",
+			--     },
+			--   },
 			-- },
 			-- cargo = {
-			-- 	features = "all",
+			--   features = "all",
 			-- },
 			-- cachePriming = {
-			-- 	enable = false,
+			--   enable = false,
 			-- },
 		},
 	},
 }
+
