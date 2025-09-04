@@ -3,7 +3,7 @@ return {
 	config = function()
 		require("zen-mode").setup({
 			window = {
-				-- backdrop = 0.5, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
+				-- backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
 				-- width = 0.6, -- width of the Zen window
 				width = 85, -- width of the Zen window
 				height = 1, -- height of the Zen window
@@ -38,15 +38,18 @@ return {
 				-- Turn off colorcolumn
 				vim.opt.colorcolumn = ""
 
-				-- vim.api.nvim_set_hl(0, "Normal", { bg = "#211e30" })
-				-- vim.api.nvim_set_hl(0, "ZenBg", { bg = "#191724" })
+				-- Set bg to not be transparent
+				-- TODO: this should happen based on colorscheme
+				vim.api.nvim_set_hl(0, "Normal", { bg = "#24273A" })
+				vim.api.nvim_set_hl(0, "ZenBg", { bg = "#191724" })
 			end,
 			-- callback where you can add custom code when the Zen window closes
 			on_close = function()
 				-- Turn colorcolumn back on
 				vim.opt.colorcolumn = "80" -- column at 80 to keep files "clean"
 
-				-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+				-- Set bg back to transparent
+				vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 			end,
 		})
 

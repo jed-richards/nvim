@@ -15,12 +15,10 @@ return {
 		config = function()
 			require("rose-pine").setup({
 				disable_background = true,
-				disable_italics = true,
+				-- disable_italics = true,
 			})
-			--
+
 			vim.cmd.colorscheme("rose-pine")
-			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 		end,
 	},
 
@@ -36,8 +34,12 @@ return {
 					light = "latte",
 					dark = "mocha",
 				},
-				transparent_background = true,
+				transparent_background = false,
 				no_italic = true,
+
+				dim_inactive = {
+					enabled = true,
+				},
 			})
 
 			-- vim.cmd.colorscheme("catppuccin")
