@@ -1,0 +1,3 @@
+-- vim.keymap.set("n", "<leader><leader>x", ":source %<CR>", { desc = "Execute the current file", buffer = true })
+-- vim.keymap.set("n", "<leader>x", ":.lua<CR>", { desc = "Execute the current line", buffer = true })
+-- vim.keymap.set("n", "<leader>x", ":lua<CR>", { desc = "Execute the block of code", buffer = true })
