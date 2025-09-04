@@ -1,6 +1,10 @@
 return {
 	"saghen/blink.cmp",
-	dependencies = { "rafamadriz/friendly-snippets", "echasnovski/mini.snippets" },
+	dependencies = {
+		"rafamadriz/friendly-snippets",
+		"echasnovski/mini.snippets",
+		"Kaiser-Yang/blink-cmp-avante",
+	},
 
 	-- enabled = false,
 
@@ -49,7 +53,16 @@ return {
 			fuzzy = { implementation = "prefer_rust_with_warning" },
 
 			sources = {
-				default = { "lsp", "path", "snippets", "buffer" },
+				default = { "avante", "lsp", "path", "snippets", "buffer" },
+				providers = {
+					avante = {
+						module = "blink-cmp-avante",
+						name = "Avante",
+						opts = {
+							-- options for blink-cmp-avante
+						},
+					},
+				},
 			},
 
 			signature = { enabled = true },
