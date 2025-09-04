@@ -38,12 +38,19 @@ return {
 			javascript = { "prettier" },
 			json = { "prettier" },
 			jsonc = { "prettier" },
-			markdown = { "prettier" },
 			typescript = { "prettier" },
+			astro = { "prettier" },
+
+			-- FIXME: mdformat messes with front matter (--- ---)
+			-- markdown = { "mdformat" },
+			markdown = { "prettier" },
 
 			swift = { "swift_format" }, -- /usr/bin/swift-format
 
-			nix = { "alejandra" },
+			-- nix = { "alejandra" },
+			nix = { "nixfmt" },
+
+			typst = { "typstyle" },
 		},
 	},
 }
