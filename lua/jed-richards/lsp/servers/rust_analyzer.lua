@@ -1,5 +1,5 @@
 -- For more settings see:
--- https://github.com/rust-lang/rust-analyzer/blob/master/docs/user/generated_config.adoc
+-- https://github.com/rust-lang/rust-analyzer/blob/master/docs/book/src/configuration_generated.md
 
 return {
 	-- https://github.com/pr2502/ra-multiplex/blob/main/README.md
@@ -15,8 +15,10 @@ return {
 	-- cmd = { "ra-multiplex" },
 	settings = {
 		["rust-analyzer"] = {
-			checkOnSave = {
-				command = "clippy",
+			checkOnSave = true,
+			check = {
+				-- command = "clippy",
+				command = "check",
 			},
 			inlayHints = {
 				typeHints = {
@@ -30,6 +32,19 @@ return {
 					useParameterNames = true,
 				},
 			},
+			-- lens = {
+			-- 	enable = false,
+			-- },
+			-- procMacro = {
+			-- 	ignored = {
+			-- 		mockall_derive = {
+			-- 			"automock",
+			-- 		},
+			-- 		mockall_double = {
+			-- 			"double",
+			-- 		},
+			-- 	},
+			-- },
 			-- cargo = {
 			-- 	features = "all",
 			-- },
