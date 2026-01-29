@@ -1,49 +1,42 @@
-# My Neovim Config
+# My Neovim Configuration
 
-### Plugins Used
+This is my personal Neovim configuration designed to my liking. It will
+continue to change and be refined as my workflow changes and gets refined.
 
-LSP Stuff:
-- neovim/nvim-lspconfig
-- williamboman/mason.nvim
-- williamboman/mason-lspconfig.nvim
-- WhoIsSethDaniel/mason-tool-installer.nvim
-- j-hui/fidget.nvim
+I am a big believer in tooling to make development and life easier.
 
-Completion Stuff:
-- hrsh7th/nvim-cmp
-- L3MON4D3/LuaSnip
-- saadparwaiz1/cmp_luasnip
-- rafamadriz/friendly-snippets
-- hrsh7th/cmp-vim-lsp
-- hrsh7th/cmp-buffer
-- hrsh7th/cmp-path
+## Config structure
 
-Telescope:
-- nvim-telescope/telescope.nvim
-    - nvim-lua/plenary.nvim
-    - nvim-telescope/telescope-fzf-native.nvim
-    - nvim-telescope/telescope-ui-select.nvim
-    - nvim-tree/nvim-web-devicons
+My personal config is located in in [`lua/config/`](./lua/config/). This
+directory contains:
 
+- Neovim [options](./lua/config/options.lua)
+- Neovim native [keymaps](./lua/config/keymaps.lua)
+- Some quality of life [autocommands](./lua/config/autocommands.lua)
+- [lazy.nvim](./lua/config/lazy.lua) plugin manager bootstrap
+- My [lsp config](./lua/config/lsp.lua)
 
-Colorshemes:
-- rose-pie/neovim
-- folke/tokyonight.nvim
+This configuration uses [`lazy.nvim`](https://github.com/folke/lazy.nvim) to
+manage plugins. The plugin specifications and configurations are located in the
+[`lua/plugins/`](./lua/plugins/) directory.
 
-Other:
-- theprimeagen/harpoon --> navigate important files (AMAZING)
-- stevearc/conform.nvim --> formatter
-- numToStr/Comment.nvim
-- lewis6991/gitsigns.nvim
-- folke/todo-comments.nvim
-- echasnovski/mini.nvim
-    - mini.ai
-    - mini.surround
-    - mini.statusline
-- nvim-treesitter/nvim-treesitter --> syntax highlights/better text objects
-- folke/which-key.nvim
+The [lsp/](./lsp/) directory contains some language server configuration tweaks
+that get applied to the language server.
 
-### Requirements
-- xclip - for system clipboard
-- ripgrep - for telescope
-- [node](https://github.com/nodesource/distributions?tab=readme-ov-file#installation-instructions)
+## Requirements
+
+- [Neovim](https://neovim.io/)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [Node.js](https://nodejs.org/en/) (for some LSPs)
+- A Nerd Font (for icons)
+
+## Installation
+
+1.  Clone this repository to your Neovim configuration directory:
+    ```bash
+    git clone https://github.com/jed-richards/nvim.git ~/.config/nvim
+    ```
+2.  Start Neovim. `lazy.nvim` will automatically install the plugins.
+    ```bash
+    nvim
+    ```
