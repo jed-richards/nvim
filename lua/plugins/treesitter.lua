@@ -5,6 +5,7 @@ return {
 
   config = function()
     local parsers = {
+      "ledger",
       "python",
       "typescript",
       "tsx",

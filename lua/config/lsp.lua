@@ -2,6 +2,7 @@ vim.lsp.set_log_level("WARN")
 
 -- List of servers to enable
 local servers = {
+  "hledger_lsp",
   "jsonls",
   "lua_ls",
   "pyright",
