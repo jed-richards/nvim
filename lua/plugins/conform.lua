@@ -32,8 +32,8 @@ return {
       -- yaml = { "prettier" },
       -- css = { "prettier" },
       -- html = { "prettier" },
-      json = { "prettier" },
-      jsonc = { "prettier" },
+      json = { "prettierd", "prettier" },
+      jsonc = { "prettierd", "prettier" },
       -- astro = { "prettier" },
       markdown = { "prettier" },
       --

@@ -2,11 +2,14 @@ vim.lsp.set_log_level("WARN")
 
 -- List of servers to enable
 local servers = {
+  "eslint",
   "hledger_lsp",
+  "html",
   "jsonls",
   "lua_ls",
   "pyright",
   "ruff",
+  "tailwindcss",
   "ts_ls",
 }
 

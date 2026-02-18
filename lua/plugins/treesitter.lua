@@ -5,10 +5,12 @@ return {
 
   config = function()
     local parsers = {
+      "dockerfile",
       "ledger",
       "python",
       "typescript",
       "tsx",
+      "yaml",
     }
 
     -- TODO: install parsers like so

@@ -20,6 +20,7 @@ return {
         ensure_installed = {
           -- Language servers
           "typescript-language-server",
+          "eslint-lsp",
           "lua-language-server",
           "ruff",
           "pyright",
