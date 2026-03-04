@@ -16,7 +16,6 @@ return {
 
       -- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim?tab=readme-ov-file#configuration
       require("mason-tool-installer").setup({
-        -- TODO: fill this out as I know what I need
         ensure_installed = {
           -- Language servers
           "typescript-language-server",
@@ -25,9 +24,12 @@ return {
           "ruff",
           "pyright",
           "jsonls",
+          "tailwindcss-language-server",
+          "html-lsp",
 
           -- Formatters
           "stylua",
+          "prettierd",
           "prettier",
         },
 
@@ -46,15 +48,4 @@ return {
     end,
   },
 
-  -- Pretty UI for useful status updates for LSP
-  -- {
-  -- 	"j-hui/fidget.nvim",
-  -- 	opts = {
-  -- 		notification = {
-  -- 			window = {
-  -- 				winblend = 0,
-  -- 			},
-  -- 		},
-  -- 	},
-  -- },
 }

@@ -7,6 +7,7 @@ return {
     local parsers = {
       "dockerfile",
       "ledger",
+      "lua",
       "python",
       "typescript",
       "tsx",
