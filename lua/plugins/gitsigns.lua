@@ -37,9 +37,20 @@ return {
           end
         end, { desc = "Prev hunk" })
 
-        -- TODO: look at keymaps
-        --
-        -- https://github.com/lewis6991/gitsigns.nvim?tab=readme-ov-file#-keymaps
+        -- Actions (https://github.com/lewis6991/gitsigns.nvim?tab=readme-ov-file#-keymaps)
+        map("n", "<leader>hs", gitsigns.stage_hunk, { desc = "Stage hunk" })
+        map("n", "<leader>hr", gitsigns.reset_hunk, { desc = "Reset hunk" })
+        map("v", "<leader>hs", function()
+          gitsigns.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+        end, { desc = "Stage hunk" })
+        map("v", "<leader>hr", function()
+          gitsigns.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+        end, { desc = "Reset hunk" })
+        map("n", "<leader>hp", gitsigns.preview_hunk, { desc = "Preview hunk" })
+        map("n", "<leader>hb", function()
+          gitsigns.blame_line({ full = true })
+        end, { desc = "Blame line" })
+        map("n", "<leader>hd", gitsigns.diffthis, { desc = "Diff this" })
       end,
     })
   end,
