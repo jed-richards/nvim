@@ -9,28 +9,38 @@ return {
     end,
   },
   {
+    "f-person/auto-dark-mode.nvim",
+    opts = {
+      update_interval = 3000,
+      set_dark_mode = function()
+        vim.o.background = "dark"
+      end,
+      set_light_mode = function()
+        vim.o.background = "light"
+      end,
+    },
+  },
+  {
+    "kepano/flexoki-neovim",
+    name = "flexoki",
+    lazy = true,
+  },
+  {
     "rose-pine/neovim",
     name = "rose-pine",
     lazy = true,
-    -- priority = 1000,
     config = function()
       require("rose-pine").setup({
-        variant = "auto", -- auto, main, moon, or dawn
-        dark_variant = "main", -- main, moon, or dawn
+        variant = "auto",
+        dark_variant = "main",
         dim_inactive_windows = true,
         extend_background_behind_borders = true,
-
         styles = {
           bold = true,
           italic = true,
           transparency = false,
         },
       })
-
-      -- vim.cmd("colorscheme rose-pine")
-      -- vim.cmd("colorscheme rose-pine-main")
-      -- vim.cmd("colorscheme rose-pine-moon")
-      -- vim.cmd("colorscheme rose-pine-dawn")
     end,
   },
 }
