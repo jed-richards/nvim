@@ -31,6 +31,9 @@ return {
           "stylua",
           "prettierd",
           "prettier",
+
+          -- Linters
+          "mypy",
         },
 
         -- If mason-lspconfig is installed, mason-tool-installer can
