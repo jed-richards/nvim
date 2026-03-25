@@ -26,6 +26,7 @@ return {
           "jsonls",
           "tailwindcss-language-server",
           "html-lsp",
+          "rust-analyzer",
 
           -- Formatters
           "stylua",
@@ -50,5 +51,4 @@ return {
       })
     end,
   },
-
 }
