@@ -9,7 +9,7 @@ local servers = {
   "lua_ls",
   "pyright",
   "ruff",
-  "rust-analyzer",
+  "rust_analyzer",
   "tailwindcss",
   "ts_ls",
 }

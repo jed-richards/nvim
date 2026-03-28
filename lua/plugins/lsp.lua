@@ -22,6 +22,7 @@ return {
           "eslint-lsp",
           "lua-language-server",
           "ruff",
+          "rust-analyzer",
           "pyright",
           "jsonls",
           "tailwindcss-language-server",
