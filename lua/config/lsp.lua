@@ -1,4 +1,4 @@
-vim.lsp.set_log_level("WARN")
+vim.lsp.log.set_level("WARN")
 
 -- List of servers to enable
 local servers = {
@@ -50,38 +50,44 @@ function M.setup()
       -- - gri (go to implementation)
       -- - gO  (symbols)
       --
-      -- Default
+      -- Default (provided by Neovim 0.12)
       -- - grn (rename)
       -- - gra (code action)
+      -- - grx (codelens run)
 
       vim.keymap.set("n", "gd", function()
         vim.lsp.buf.definition()
-      end, { buffer = bufnr, desc = "LSP: Go to definition" })
+      end, { buf = bufnr, desc = "LSP: Go to definition" })
 
       vim.keymap.set("n", "grr", function()
         builtin.lsp_references()
-      end, { buffer = bufnr, desc = "LSP: Get references" })
+      end, { buf = bufnr, desc = "LSP: Get references" })
 
       vim.keymap.set("n", "grt", function()
         builtin.lsp_type_definitions()
-      end, { buffer = bufnr, desc = "LSP: Go to type definition" })
+      end, { buf = bufnr, desc = "LSP: Go to type definition" })
 
       if client and client:supports_method("textDocument/implementation") then
         vim.keymap.set("n", "gri", function()
           builtin.lsp_implementations()
-        end, { buffer = bufnr, desc = "LSP: Go to implementation" })
+        end, { buf = bufnr, desc = "LSP: Go to implementation" })
       end
 
       vim.keymap.set("n", "gO", function()
         builtin.lsp_document_symbols()
-      end, { buffer = bufnr, desc = "LSP: Get document symbols" })
+      end, { buf = bufnr, desc = "LSP: Get document symbols" })
 
       vim.keymap.set(
         "n",
         "K",
         vim.lsp.buf.hover,
-        { buffer = bufnr, desc = "LSP: Hover Documentation" }
+        { buf = bufnr, desc = "LSP: Hover Documentation" }
       )
+
+      -- Workspace diagnostics (new in Neovim 0.12)
+      vim.keymap.set("n", "<leader>wd", function()
+        vim.lsp.buf.workspace_diagnostics()
+      end, { buf = bufnr, desc = "LSP: [W]orkspace [D]iagnostics" })
 
       -- Document highlighting
       if
@@ -98,6 +104,9 @@ function M.setup()
       end
     end,
   })
+
+  -- Enable code lens (new in Neovim 0.12)
+  vim.lsp.codelens.enable(true)
 
   -- Enable all servers (configs loaded automatically from lsp/ directory)
   vim.lsp.enable(servers)
