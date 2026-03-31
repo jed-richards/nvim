@@ -13,7 +13,7 @@ vim.keymap.set("n", "<leader>yc", function()
   end
   vim.fn.setreg("+", table.concat(csv_lines, "\n"))
   print("CSV copied to clipboard!")
-end, { buffer = true, desc = "Yank to CSV" })
+end, { buf = true, desc = "Yank to CSV" })
 
 vim.keymap.set("n", "<leader>yj", function()
   local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
@@ -59,4 +59,4 @@ vim.keymap.set("n", "<leader>yj", function()
   else
     print("No data found to convert.")
   end
-end, { buffer = true, desc = "Yank to JSON" })
+end, { buf = true, desc = "Yank to JSON" })
