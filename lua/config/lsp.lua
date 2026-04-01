@@ -76,12 +76,9 @@ function M.setup()
         builtin.lsp_document_symbols()
       end, { buffer = bufnr, desc = "LSP: Get document symbols" })
 
-      vim.keymap.set(
-        "n",
-        "K",
-        vim.lsp.buf.hover,
-        { buffer = bufnr, desc = "LSP: Hover Documentation" }
-      )
+      vim.keymap.set("n", "K", function()
+        vim.lsp.buf.hover({ border = "single" })
+      end, { buffer = bufnr, desc = "LSP: Hover Documentation" })
 
       -- Document highlighting
       if
