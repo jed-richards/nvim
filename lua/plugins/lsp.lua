@@ -18,6 +18,7 @@ return {
       require("mason-tool-installer").setup({
         ensure_installed = {
           -- Language servers
+          "biome",
           "typescript-language-server",
           "eslint-lsp",
           "lua-language-server",
@@ -27,7 +28,6 @@ return {
           "jsonls",
           "tailwindcss-language-server",
           "html-lsp",
-          "rust-analyzer",
 
           -- Formatters
           "stylua",

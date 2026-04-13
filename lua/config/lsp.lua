@@ -2,6 +2,7 @@ vim.lsp.set_log_level("WARN")
 
 -- List of servers to enable
 local servers = {
+  "biome",
   "eslint",
   "hledger_lsp",
   "html",
@@ -42,6 +43,18 @@ function M.setup()
       local bufnr = args.buf
       local client = vim.lsp.get_client_by_id(args.data.client_id)
       local builtin = require("telescope.builtin")
+
+      -- Stop eslint when biome is already handling the buffer (covers the
+      -- case where eslint attaches after biome; biome's on_attach handles
+      -- the reverse ordering)
+      if client and client.name == "eslint" then
+        for _, c in ipairs(vim.lsp.get_clients({ bufnr = bufnr })) do
+          if c.name == "biome" then
+            client:stop()
+            return
+          end
+        end
+      end
 
       -- Set some keymaps. Using some defaults just with telescope.
       -- - gd  (go to definition)
