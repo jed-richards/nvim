@@ -6,6 +6,13 @@ return {
     neogen.setup({
       enabled = true,
       snippet_engine = "mini",
+      languages = {
+        python = {
+          template = {
+            annotation_convention = "reST",
+          },
+        },
+      },
     })
 
     vim.keymap.set("n", "<leader>ngf", function()

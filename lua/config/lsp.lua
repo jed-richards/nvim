@@ -1,4 +1,4 @@
-vim.lsp.set_log_level("WARN")
+vim.lsp.log.set_level("WARN")
 
 -- List of servers to enable
 local servers = {
@@ -8,11 +8,15 @@ local servers = {
   "html",
   "jsonls",
   "lua_ls",
+  "marksman",
   "pyright",
   "ruff",
   "rust_analyzer",
   "tailwindcss",
+  "taplo",
+  "terraformls",
   "ts_ls",
+  "yamlls",
 }
 
 local M = {}

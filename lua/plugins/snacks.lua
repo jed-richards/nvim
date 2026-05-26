@@ -8,6 +8,7 @@ return {
   opts = {
     notifier = { enabled = true },
     gitbrowse = { enabled = true },
+    zen = { enabled = true },
   },
 
   keys = {
@@ -17,6 +18,13 @@ return {
         Snacks.gitbrowse()
       end,
       desc = "Git browse",
+    },
+    {
+      "<leader>tz",
+      function()
+        Snacks.zen()
+      end,
+      desc = "Toggle Zen-mode",
     },
   },
 }

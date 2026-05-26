@@ -6,6 +6,7 @@ return {
 
     lint.linters_by_ft = {
       python = { "mypy" },
+      markdown = { "vale" },
     }
 
     -- Determine which Python to use for type checking

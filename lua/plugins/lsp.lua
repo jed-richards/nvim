@@ -28,6 +28,9 @@ return {
           "jsonls",
           "tailwindcss-language-server",
           "html-lsp",
+          "taplo",
+          "marksman",
+          "yamlls",
 
           -- Formatters
           "stylua",
@@ -36,6 +39,7 @@ return {
 
           -- Linters
           "mypy",
+          "vale",
         },
 
         -- If mason-lspconfig is installed, mason-tool-installer can
