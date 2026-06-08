@@ -37,6 +37,7 @@ return {
 
       local candidates = {
         { name = "dev", var = "DB_DEV_URL" },
+        { name = "dev-docker", var = "DB_DEV_DOCKER_URL" },
         { name = "staging", var = "DB_STAGING_URL" },
         { name = "prod", var = "DB_PROD_URL" },
       }
