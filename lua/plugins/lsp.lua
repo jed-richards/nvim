@@ -19,6 +19,7 @@ return {
         ensure_installed = {
           -- Language servers
           "biome",
+          "tilt",
           "typescript-language-server",
           "eslint-lsp",
           "lua-language-server",

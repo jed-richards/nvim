@@ -15,6 +15,7 @@ local servers = {
   "tailwindcss",
   "taplo",
   "terraformls",
+  "tilt_ls",
   "ts_ls",
   "yamlls",
 }

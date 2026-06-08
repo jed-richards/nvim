@@ -9,6 +9,7 @@ return {
       "ledger",
       "lua",
       "python",
+      "starlark",
       "typescript",
       "tsx",
       "yaml",
@@ -17,9 +18,13 @@ return {
     -- TODO: install parsers like so
     require("nvim-treesitter").install(parsers)
 
+    -- Tiltfile uses Starlark syntax; map the filetype to the parser
+    vim.treesitter.language.register("starlark", "tiltfile")
+
     -- Create autocommand to enable treesitter for installed parsers
+    local ft_patterns = vim.list_extend({ unpack(parsers) }, { "tiltfile" })
     vim.api.nvim_create_autocmd("FileType", {
-      pattern = parsers,
+      pattern = ft_patterns,
       callback = function()
         -- syntax highlighting, provided by Neovim
         vim.treesitter.start()
