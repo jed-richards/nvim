@@ -34,7 +34,8 @@ return {
     "rose-pine/neovim",
     name = "rose-pine",
     enabled = false,
-    lazy = true,
+    lazy = false,
+    priority = 1000,
     config = function()
       require("rose-pine").setup({
         variant = "auto",
@@ -51,6 +52,7 @@ return {
   },
   {
     "scottmckendry/cyberdream.nvim",
+    enabled = true,
     lazy = false,
     priority = 1000,
     dependencies = {
@@ -65,16 +67,16 @@ return {
 
       vim.cmd.colorscheme("cyberdream")
 
-      -- Setup auto dark mode
-      require("auto-dark-mode").setup({
-        update_interval = 3000,
-        set_dark_mode = function()
-          vim.o.background = "dark"
-        end,
-        set_light_mode = function()
-          vim.o.background = "light"
-        end,
-      })
+      -- -- Setup auto dark mode
+      -- require("auto-dark-mode").setup({
+      --   update_interval = 3000,
+      --   set_dark_mode = function()
+      --     vim.o.background = "dark"
+      --   end,
+      --   set_light_mode = function()
+      --     vim.o.background = "light"
+      --   end,
+      -- })
     end,
   },
 }
