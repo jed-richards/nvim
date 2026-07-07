@@ -26,7 +26,8 @@ return {
           "ruff",
           "rust-analyzer",
           "svelte-language-server",
-          "pyright",
+          "pyright", -- replaced by ty
+          "ty",
           "jsonls",
           "tailwindcss-language-server",
           "html-lsp",

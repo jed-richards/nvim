@@ -15,7 +15,7 @@ return {
     ".git",
   },
   on_attach = function(client)
-    -- disable hover in favor of Pyright
+    -- disable hover in favor of pyright or ty
     client.server_capabilities.hoverProvider = false
   end,
 }

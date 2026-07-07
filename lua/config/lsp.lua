@@ -9,7 +9,7 @@ local servers = {
   "jsonls",
   "lua_ls",
   "marksman",
-  "pyright",
+  -- "pyright", -- replaced by ty
   "ruff",
   "rust_analyzer",
   "svelte",
@@ -18,6 +18,7 @@ local servers = {
   "terraformls",
   "tilt_ls",
   "ts_ls",
+  "ty",
   "yamlls",
 }
 
