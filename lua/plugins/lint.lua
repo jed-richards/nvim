@@ -7,6 +7,8 @@ return {
     lint.linters_by_ft = {
       python = { "mypy" },
       markdown = { "vale" },
+      sh = { "shellcheck" },
+      bash = { "shellcheck" },
     }
 
     -- Determine which Python to use for type checking
@@ -31,6 +33,14 @@ return {
     vim.api.nvim_create_autocmd({ "BufWritePost" }, {
       callback = function()
         lint.try_lint()
+
+        -- actionlint only applies to GitHub Actions workflow files, so it's
+        -- run explicitly here rather than via linters_by_ft.yaml (which
+        -- would run it against every yaml file)
+        local filename = vim.api.nvim_buf_get_name(0)
+        if filename:match("%.github/workflows/.+%.ya?ml$") then
+          lint.try_lint("actionlint")
+        end
       end,
     })
   end,

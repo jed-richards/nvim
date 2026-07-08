@@ -43,6 +43,8 @@ return {
           -- Linters
           "mypy",
           "vale",
+          "actionlint",
+          "shellcheck",
         },
 
         -- If mason-lspconfig is installed, mason-tool-installer can
