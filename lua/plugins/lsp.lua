@@ -25,6 +25,7 @@ return {
           "lua-language-server",
           "ruff",
           "rust-analyzer",
+          "svelte-language-server",
           "pyright",
           "jsonls",
           "tailwindcss-language-server",

@@ -48,6 +48,7 @@ return {
       jsonc = { "biome", "prettierd", "prettier", stop_after_first = true },
       -- astro = { "prettier" },
       markdown = { "prettier" },
+      svelte = { "prettierd", "prettier", stop_after_first = true },
       --
       -- typst = { "typstyle" },
     },

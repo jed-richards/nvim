@@ -12,6 +12,7 @@ local servers = {
   "pyright",
   "ruff",
   "rust_analyzer",
+  "svelte",
   "tailwindcss",
   "taplo",
   "terraformls",

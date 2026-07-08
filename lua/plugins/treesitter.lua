@@ -6,10 +6,14 @@ return {
   config = function()
     local parsers = {
       "dockerfile",
+      "html",
+      "javascript",
       "ledger",
       "lua",
       "python",
+      "scss",
       "starlark",
+      "svelte",
       "typescript",
       "tsx",
       "yaml",
