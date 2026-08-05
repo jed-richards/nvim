@@ -60,3 +60,30 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>td", function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, { silent = true, noremap = true, desc = "[T]oggle [D]iagnostics" })
+
+-- Yank file:line reference (e.g. path/to/file.py:L109 or path/to/file.py:L109-L125)
+local function yank_file_line_ref(is_visual)
+  local filepath = vim.fn.fnamemodify(vim.fn.expand("%"), ":~:.")
+  local ref
+  if is_visual then
+    local start_line = vim.fn.line("'<")
+    local end_line = vim.fn.line("'>")
+    if start_line > end_line then
+      start_line, end_line = end_line, start_line
+    end
+    ref = start_line == end_line and ("L" .. start_line) or ("L" .. start_line .. "-L" .. end_line)
+  else
+    ref = "L" .. vim.fn.line(".")
+  end
+  local result = filepath .. ":" .. ref
+  vim.fn.setreg('"', result)
+  vim.fn.setreg("+", result)
+  vim.notify("Yanked " .. result)
+end
+
+map("n", "<leader>yl", function()
+  yank_file_line_ref(false)
+end, { desc = "[Y]ank file:[L]ine reference" })
+map("v", "<leader>yl", function()
+  yank_file_line_ref(true)
+end, { desc = "[Y]ank file:[L]ine-range reference" })
