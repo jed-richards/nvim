@@ -34,11 +34,13 @@ return {
           "taplo",
           "marksman",
           "yamlls",
+          "tinymist",
 
           -- Formatters
           "stylua",
           "prettierd",
           "prettier",
+          "typstyle",
 
           -- Linters
           "mypy",

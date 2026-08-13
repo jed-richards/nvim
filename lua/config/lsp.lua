@@ -17,6 +17,7 @@ local servers = {
   "taplo",
   "terraformls",
   "tilt_ls",
+  "tinymist",
   "ts_ls",
   "ty",
   "yamlls",

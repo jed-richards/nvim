@@ -15,6 +15,7 @@ return {
       "starlark",
       "svelte",
       "typescript",
+      "typst",
       "tsx",
       "yaml",
     }
