@@ -71,7 +71,8 @@ local function yank_file_line_ref(is_visual)
     if start_line > end_line then
       start_line, end_line = end_line, start_line
     end
-    ref = start_line == end_line and ("L" .. start_line) or ("L" .. start_line .. "-L" .. end_line)
+    ref = start_line == end_line and ("L" .. start_line)
+      or ("L" .. start_line .. "-L" .. end_line)
   else
     ref = "L" .. vim.fn.line(".")
   end
