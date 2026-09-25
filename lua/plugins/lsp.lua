@@ -47,6 +47,9 @@ return {
           "vale",
           "actionlint",
           "shellcheck",
+
+          -- Debug adapters
+          "debugpy",
         },
 
         -- If mason-lspconfig is installed, mason-tool-installer can
