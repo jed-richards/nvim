@@ -17,7 +17,7 @@ return {
     },
     keys = {
       {
-        "<leader>db",
+        "<leader>Db",
         function()
           for i = 1, vim.fn.tabpagenr("$") do
             for _, buf in ipairs(vim.fn.tabpagebuflist(i)) do
